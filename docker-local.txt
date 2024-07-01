@@ -1,0 +1,11 @@
+Docker image install:
+
+#install httpd and php etc 
+apt update -y
+apt upgrade -y
+apt install apache2 -y
+apt install php -y
+apt install libapache2-mod-php -y
+a2enmod php8.3 			# problem as the install doc said to run "a2enmod php"
+apt install php-mysqlnd		# forgot/missed this dependancy , which will give you the 500 error in php
+service apache2 start
