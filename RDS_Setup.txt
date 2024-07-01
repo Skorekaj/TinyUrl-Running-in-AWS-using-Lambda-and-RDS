@@ -1,0 +1,26 @@
+- Setup an rds database as mysql free tier
+- Edit the sg to open the 3306 port to the db so we can connect from external
+- Test connection with mysql/MySQLWorkbench
+==========================mySql Workbench =================================
+# show all databses
+show databases;
+
+# create database <test>
+create database test;
+
+# change the database your connected to
+use test;
+
+# create table in the database your connected to 
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+# Insert values to table in database
+INSERT INTO Persons (PersonID, LastName, FirstName, Address, City)
+VALUES (1, 'Hansen', 'Jonas', 'sweden', 'helsingborg' );
+===========================================================
